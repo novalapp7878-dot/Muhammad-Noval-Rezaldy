@@ -1,11 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NusaBanjar - Sasirangan Banjar</title>
+    <link rel="stylesheet"
+            href="style.css">
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <a href="index.html"
+                class="logo">
+                NusaBanjar
+            </a>
+
+            <div class="menu"
+                id="menu">
+
+                <a href="index.html">
+                    Beranda
+                </a>
+
+                <a href="produk.html">
+                    Produk
+                </a>
+
+                <a href="kontak.html">
+                    Kontak
+                </a>
+            </div>
+
+            <div class="hamburger"
+                onclick="bukaMenu()">
+                ☰
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>
+                Produk Tradisional<br>
+                Khas Banjar
+            </h1>
+
+            <p>
+                Kain Sasirangan dibuat dengan Teknik
+                Pewarnaan rintang, langsung dari
+                Pengrajin Kalimantan Selatan.
+            </p>
+
+            <a href="produk.html"
+                class="btn">
+                Lihat Produk
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <div class="circle"></div>
+        </div>
+    </section>
+
+    <section class="unggulan">
+        <h2>
+            Produk Unggulan:
+        </h2>
+
+        <div class="produk-container">
+            <!--motif indigo-->
+            <div class="card">
+                <img src="Motif Indigo.jpeg"
+                    alt="Sasirangan Indigo">
+                
+                <div class="card-content">
+                    <h3>
+                        Sasirangan Indigo
+                    </h3>
+                    
+                    <p class="harga">
+                        Rp.150.000
+                    </p>
+
+                    <button
+                        class="btn-card"
+                        onclick="pesanProduk('Indigo')">
+                        Pesan
+                    </button>
+                </div>
+            </div>
+
+            <!--motif bata-->
+            <div class="card">
+                <img src="assets/Motif Bata.jpeg"
+                    alt="Sasirangan Bata">
+                
+                <div class="card-content">
+                    <h3>
+                        Sasirangan Bata
+                    </h3>
+                    
+                    <p class="harga">
+                        Rp.160.000
+                    </p>
+
+                    <button
+                        class="btn-card"
+                        onclick="pesanProduk('Bata')">
+                        Pesan
+                    </button>
+                </div>
+            </div>
+
+            <!--motif emas-->
+            <div class="card">
+                <img src="Motif Emas.jpeg"
+                    alt="Sasirangan Emas">
+                
+                <div class="card-content">
+                    <h3>
+                        Sasirangan Emas
+                    </h3>
+                    
+                    <p class="harga">
+                        Rp.140.000
+                    </p>
+
+                    <button
+                        class="btn-card"
+                        onclick="pesanProduk('Emas')">
+                        Pesan
+                    </button>
+                </div>
+            </div>
+
+            <!--motif coklat-->
+            <div class="card">
+                <img src="Motif Coklat.jpeg"
+                    alt="Sasirangan Coklat">
+                
+                <div class="card-content">
+                    <h3>
+                        Sasirangan Coklat
+                    </h3>
+                    
+                    <p class="harga">
+                        Rp.160.000
+                    </p>
+
+                    <button
+                        class="btn-card"
+                        onclick="pesanProduk('Coklat')">
+                        Pesan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--sejarah Sasirangan-->
+    <section class="sejarah">
+        <h2>
+            Sebelum beli, Kenali Sejarahnya
+        </h2>
+
+        <p>
+            Nama Sasirangan berasal dari kata
+            "Sirang" dalam bahasa Banjar yang 
+            berarti Menjelujur. Benang dijelujur
+            lalu ditarik kencang sebelum Kain
+            dicelup ke pewarna alami.
+        </p>
+    </section>
+
+    <!--popup konfirmasi-->
+    <div id="popupPesan"
+        class="popup">
+
+        <div class="popup-box">
+            <div class="wajah">
+                😊
+            </div>
+
+            <h2>
+                Apakah yakin ingin memesan?
+            </h2>
+
+            <p id="namaProdukPopup">
+                Sasirangan Indigo,
+                Sasirangan Bata,
+                Sasirangan Emas,
+                Sasirangan Coklat.
+            </p>
+
+            <div class="popup-tombol">
+                <button
+                    class="btn-batal"
+                    onclick="tutupPopup()">
+                    Batal
+                </button>
+
+                <button
+                    class="btn-ya"
+                    onclick="lanjutPesan()">
+                    Ya, Pesan Saja
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
