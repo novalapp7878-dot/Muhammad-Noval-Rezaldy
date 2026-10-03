@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan - NusaBanjar</title>
+    <link rel="stylesheet"
+            href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html"
+                class="logo">
+                NusaBanjar
+            </a>
+
+            <div class="menu"
+                id="menu">
+            
+                <a href="index.html">
+                    Beranda
+                </a>
+
+                <a href="produk.html">
+                    Produk
+                </a>
+
+                <a href="kontak.html">
+                    Kontak
+                </a>
+            </div>
+
+            <div clas="hamburger"
+                onclick="bukaMenu()">
+                ☰
+            </div>
+        </nav>
+    </header>
+
+    <!--form pemesanan-->
+    <main cla="form-page">
+        <div class="form-box">
+            
+            <h1>
+                Form Pemesanan
+            </h1>
+
+            <p>
+                Silahkan Isi data pemesanan kain sasirangan.
+            </p>
+
+            <form id="formPemesanan"
+                onsubmit="kirimPemesanan(event)">
+            
+                <label>
+                    Nama Lengkap
+                </label>
+
+                <input
+                    type="text"
+                    id="nama"
+                    placeholder="Masukkan nama"
+                    required>
+                
+                <label>
+                    Nomor WhatsAap
+                </label>
+
+                <input
+                    type="tel"
+                    id="telepon"
+                    placeholder="08xxxxxxxxxx"
+                    required>
+                
+                <label>
+                    Pilih Produk
+                </label>
+
+                <select
+                    id="produkPilihan"
+                    required>
+                
+                    <option value="">
+                        -- Pilih Produk --
+                    </option>
+
+                    <option value="Sasirangan Indigo">
+                        Sasirangan Indigo - Rp.150.000
+                    </option>
+
+                    <option value="Sasirangan Bata">
+                        Sasirangan bata - Rp.160.000
+                    </option>
+
+                    <option value="Sasirangan Emas">
+                        Sasirangan Emas - Rp.140.000
+                    </option>
+
+                    <option value="Sasirangan Coklat">
+                        Sasirangan Coklat - Rp.180.000
+                    </option>
+                </select>
+
+                <label>
+                    Jumlah
+                </label>
+
+                <input
+                    type="number"
+                    id="jumlah"
+                    min="1"
+                    value="1"
+                    required>
+                
+                <label>
+                    Alamat
+                </label>
+
+                <textarea
+                    id="alamat"
+                    placeholder="Masukkan alamat lengkap"
+                    required></textarea>
+                
+                <button
+                    type="submit"
+                    class="btn-submit">
+                    Kirim Pesanan
+                </button>
+            </form>
+
+            <!--hasil-->
+            <div id="hasilPesanan"
+                class="hasil">
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
