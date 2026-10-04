@@ -1,141 +1,280 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pemesanan - NusaBanjar</title>
-    <link rel="stylesheet"
-            href="style.css">
+    <title>Form Pemesanan - NusaBanjar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
         <nav class="navbar">
-            <a href="index.html"
-                class="logo">
+
+            <a href="index.html" class="logo">
                 NusaBanjar
             </a>
 
-            <div class="menu"
-                id="menu">
-            
+            <div class="menu" id="menu">
+
                 <a href="index.html">
-                    Beranda
+                    beranda
                 </a>
 
                 <a href="produk.html">
-                    Produk
+                    produk
                 </a>
 
                 <a href="kontak.html">
-                    Kontak
+                    kontak
                 </a>
+
             </div>
 
-            <div clas="hamburger"
-                onclick="bukaMenu()">
+            <div class="hamburger" onclick="bukaMenu()">
                 ☰
             </div>
+
         </nav>
     </header>
 
-    <!--form pemesanan-->
-    <main cla="form-page">
-        <div class="form-box">
-            
+    <main class="halaman-kontak">
+
+        <div class="judul-kontak">
+
             <h1>
                 Form Pemesanan
             </h1>
 
             <p>
-                Silahkan Isi data pemesanan kain sasirangan.
+                lengkapi data dibawah ini:
             </p>
 
-            <form id="formPemesanan"
-                onsubmit="kirimPemesanan(event)">
-            
-                <label>
-                    Nama Lengkap
-                </label>
+        </div>
 
-                <input
-                    type="text"
-                    id="nama"
-                    placeholder="Masukkan nama"
-                    required>
-                
-                <label>
-                    Nomor WhatsAap
-                </label>
+        <div class="area-pemesanan">
 
-                <input
-                    type="tel"
-                    id="telepon"
-                    placeholder="08xxxxxxxxxx"
-                    required>
-                
-                <label>
-                    Pilih Produk
-                </label>
+            <section class="form-pemesanan">
 
-                <select
-                    id="produkPilihan"
-                    required>
-                
-                    <option value="">
-                        -- Pilih Produk --
-                    </option>
+                <h2>
+                    Data Pemesanan:
+                </h2>
 
-                    <option value="Sasirangan Indigo">
-                        Sasirangan Indigo - Rp.150.000
-                    </option>
+                <form
+                    id="formPemesanan"
+                    onsubmit="kirimPemesanan(event)">
 
-                    <option value="Sasirangan Bata">
-                        Sasirangan bata - Rp.160.000
-                    </option>
+                    <div class="field">
 
-                    <option value="Sasirangan Emas">
-                        Sasirangan Emas - Rp.140.000
-                    </option>
+                        <label for="nama">
+                            Nama Lengkap:
+                        </label>
 
-                    <option value="Sasirangan Coklat">
-                        Sasirangan Coklat - Rp.180.000
-                    </option>
-                </select>
+                        <input
+                            type="text"
+                            id="nama"
+                            placeholder="Masukan Nama Lengkap..."
+                            required>
 
-                <label>
-                    Jumlah
-                </label>
+                    </div>
 
-                <input
-                    type="number"
-                    id="jumlah"
-                    min="1"
-                    value="1"
-                    required>
-                
-                <label>
-                    Alamat
-                </label>
+                    <div class="field">
 
-                <textarea
-                    id="alamat"
-                    placeholder="Masukkan alamat lengkap"
-                    required></textarea>
-                
+                        <label for="telepon">
+                            No.HP
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telepon"
+                            placeholder="Masukkan Nomor Hp"
+                            required>
+                        
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="alamat">
+                            Alamat:
+                        </label>
+
+                        <textarea
+                            id="alamat"
+                            placeholder=""
+                            required
+                        ></textarea>
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="catatan">
+                            Catatan (opsional)
+                        </label>
+
+                        <input
+                            type="text"
+                            id="catatan"
+                            placeholder="">
+                        
+
+                    </div>
+
+                    <div class="pembayaran-figma">
+
+                        <p>
+                            Pembayaran:
+                        </p>
+
+                        <div class="pilihan-pembayaran-figma">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="pembayaran"
+                                    value="Transfer"
+                                    checked>
+                                
+                                <span>Transfer</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="pembayaran"
+                                    value="QRIS">
+                                
+                                <span>QRIS</span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="pembayaran"
+                                    value="Tunai">
+                                
+                                <span>Tunai</span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+            <section class="ringkasan-figma">
+
+                <h2>
+                    Ringkasan Pesanan:
+                </h2>
+
+                <div class="produk-figma">
+
+                    <img
+                        id="gambarProduk"
+                        src="Motif Indigo.jpeg"
+                        alt="Sasirangan Indigo"
+                    >
+
+                    <div class="info-produk-figma">
+
+                        <select
+                            id="produkPilihan"
+                            onchange="produkBerubah()"
+                        >
+
+                            <option value="Sasirangan Indigo">
+                                Motif Sasirangan Indigo
+                            </option>
+
+                            <option value="Sasirangan Bata">
+                                Motif Sasirangan Bata
+                            </option>
+
+                            <option value="Sasirangan Emas">
+                                Motif Sasirangan Emas
+                            </option>
+
+                            <option value="Sasirangan Coklat">
+                                Motif Sasirangan Coklat
+                            </option>
+
+                        </select>
+
+                        <p id="hargaProdukRingkasan">
+                            Rp.150.000
+                        </p>
+
+                    </div>
+
+
+                    <div class="jumlah-figma">
+
+                        <button
+                            type="button"
+                            onclick="ubahJumlah(-1)"
+                        >
+                            −
+                        </button>
+
+                        <span id="jumlahRingkasan">
+                            1
+                        </span>
+
+                        <button
+                            type="button"
+                            onclick="ubahJumlah(1)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+</div>
+                <div class="baris-jumlah">
+
+                    <span>
+                        Jumlah
+                    </span>
+
+                    <span id="jumlahRingkasanDesktop">
+                        1
+                    </span>
+
+                </div>
+
+                <div class="baris-subtotal">
+
+                    <span>
+                        Subtotal:
+                    </span>
+
+                    <strong id="subtotalHarga">
+                        Rp.150.000
+                    </strong>
+
+                </div>
+
                 <button
                     type="submit"
-                    class="btn-submit">
-                    Kirim Pesanan
+                    form="formPemesanan"
+                    class="btn-pesan-sekarang">
+                    Pesan Sekarang
                 </button>
-            </form>
 
-            <!--hasil-->
-            <div id="hasilPesanan"
-                class="hasil">
-            </div>
+            </section>
+
         </div>
+
     </main>
 
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
