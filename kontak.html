@@ -7,6 +7,7 @@
     <title>Form Pemesanan - NusaBanjar</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
@@ -61,9 +62,7 @@
                     Data Pemesanan:
                 </h2>
 
-                <form
-                    id="formPemesanan"
-                    onsubmit="kirimPemesanan(event)">
+                <form id="formPemesanan" onsubmit="kirimPemesanan(event)">
 
                     <div class="field">
 
@@ -71,11 +70,7 @@
                             Nama Lengkap:
                         </label>
 
-                        <input
-                            type="text"
-                            id="nama"
-                            placeholder="Masukan Nama Lengkap..."
-                            required>
+                        <input type="text" id="nama" placeholder="Masukan Nama Lengkap..." required>
 
                     </div>
 
@@ -85,12 +80,8 @@
                             No.HP
                         </label>
 
-                        <input
-                            type="tel"
-                            id="telepon"
-                            placeholder="Masukkan Nomor Hp"
-                            required>
-                        
+                        <input type="tel" id="telepon" placeholder="Masukkan Nomor Hp" required>
+
 
                     </div>
 
@@ -100,11 +91,7 @@
                             Alamat:
                         </label>
 
-                        <textarea
-                            id="alamat"
-                            placeholder=""
-                            required
-                        ></textarea>
+                        <textarea id="alamat" placeholder="" required></textarea>
 
                     </div>
 
@@ -114,11 +101,8 @@
                             Catatan (opsional)
                         </label>
 
-                        <input
-                            type="text"
-                            id="catatan"
-                            placeholder="">
-                        
+                        <input type="text" id="catatan" placeholder="">
+
 
                     </div>
 
@@ -131,30 +115,20 @@
                         <div class="pilihan-pembayaran-figma">
 
                             <label>
-                                <input
-                                    type="radio"
-                                    name="pembayaran"
-                                    value="Transfer"
-                                    checked>
-                                
+                                <input type="radio" name="pembayaran" value="Transfer" checked>
+
                                 <span>Transfer</span>
                             </label>
 
                             <label>
-                                <input
-                                    type="radio"
-                                    name="pembayaran"
-                                    value="QRIS">
-                                
+                                <input type="radio" name="pembayaran" value="QRIS">
+
                                 <span>QRIS</span>
                             </label>
 
                             <label>
-                                <input
-                                    type="radio"
-                                    name="pembayaran"
-                                    value="Tunai">
-                                
+                                <input type="radio" name="pembayaran" value="Tunai">
+
                                 <span>Tunai</span>
                             </label>
 
@@ -174,32 +148,25 @@
 
                 <div class="produk-figma">
 
-                    <img
-                        id="gambarProduk"
-                        src="Motif Indigo.jpeg"
-                        alt="Sasirangan Indigo"
-                    >
+                    <img id="gambarProduk" src="Motif Indigo.jpeg" alt="Sasirangan Indigo">
 
                     <div class="info-produk-figma">
 
-                        <select
-                            id="produkPilihan"
-                            onchange="produkBerubah()"
-                        >
+                        <select id="produkPilihan" onchange="produkBerubah()">
 
-                            <option value="Sasirangan Indigo">
+                            <option value="Indigo">
                                 Motif Sasirangan Indigo
                             </option>
 
-                            <option value="Sasirangan Bata">
+                            <option value="Bata">
                                 Motif Sasirangan Bata
                             </option>
 
-                            <option value="Sasirangan Emas">
+                            <option value="Emas">
                                 Motif Sasirangan Emas
                             </option>
 
-                            <option value="Sasirangan Coklat">
+                            <option value="Coklat">
                                 Motif Sasirangan Coklat
                             </option>
 
@@ -214,10 +181,7 @@
 
                     <div class="jumlah-figma">
 
-                        <button
-                            type="button"
-                            onclick="ubahJumlah(-1)"
-                        >
+                        <button type="button" onclick="ubahJumlah(-1)">
                             −
                         </button>
 
@@ -225,16 +189,13 @@
                             1
                         </span>
 
-                        <button
-                            type="button"
-                            onclick="ubahJumlah(1)"
-                        >
+                        <button type="button" onclick="ubahJumlah(1)">
                             +
                         </button>
 
                     </div>
 
-</div>
+                </div>
                 <div class="baris-jumlah">
 
                     <span>
@@ -259,10 +220,7 @@
 
                 </div>
 
-                <button
-                    type="submit"
-                    form="formPemesanan"
-                    class="btn-pesan-sekarang">
+                <button type="submit" form="formPemesanan" class="btn-pesan-sekarang">
                     Pesan Sekarang
                 </button>
 
