@@ -24,4 +24,8 @@ NusaBanjar/
 └── images/
 
 Desain Figma:
+https://www.figma.com/design/ZIBySPhONAyGtNDMTS1zXl/Toko?node-id=0-1&t=NvpRuSRKAlU0Gm0W-1
 
+Nama: Muhammad Noval Rezaldy
+NIM: 2510131310004
+Program Studi: Pendidikan Komputer
