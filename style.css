@@ -7,12 +7,13 @@
 body {
     font-family: Arial, sans-serif;
     background: #f7f0e6;
-    color: #171717
+    color: #171717;
 }
 
 header {
     background: white;
 }
+
 .navbar {
     height: 64px;
     padding: 0 45px;
@@ -32,6 +33,15 @@ header {
 .menu {
     display: flex;
     gap: 28px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #171717;
+}
+
+.menu a:hover {
+    color: #315489;
 }
 
 .hamburger {
@@ -89,6 +99,16 @@ header {
     height: 195px;
     border-radius: 50%;
     background: #315489;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.circle img {
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
 }
 
 .unggulan {
@@ -104,7 +124,7 @@ header {
 
 .produk-container {
     display: grid;
-    grid-template-columns: 
+    grid-template-columns:
         repeat(4, 1fr);
     gap: 40px;
 }
@@ -113,15 +133,15 @@ header {
     background: white;
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: 
-        0 2px 5px rgba(0,0,0,0.05);
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.05);
     transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 
-    0 8px 18px rgba(0,0,0,0.12);
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .card img {
@@ -269,20 +289,217 @@ header {
     resize: vertical;
 }
 
-.btn-submit {
+.btn-pesan-sekarang {
     width: 100%;
     margin-top: 22px;
     padding: 12px;
     border: none;
-    border-radius: #315489;
+    border-radius: 6px;
+    background: #315489;
     color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-pesan-sekarang:hover {
+    background: #243f69;
+    transform: translateY(-2px);
+}
+
+.jumlah-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.jumlah-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d2c6bb;
+    border-radius: 6px;
+    overflow: hidden;
+    background: white;
+}
+
+.jumlah-control button {
+    width: 38px;
+    height: 38px;
+    border: none;
+    background: #315489;
+    color: white;
+    font-size: 18px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.btn-submit:hover {
+.jumlah-control button:hover {
     background: #243f69;
+}
+
+.jumlah-control span {
+    width: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.jumlah-row input {
+    width: 80px;
+}
+
+.pembayaran {
+    margin-top: 20px;
+}
+
+.pembayaran h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.pilih-pembayaran {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pilih-pembayaran label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 12px;
+    border: 1px solid #d2c6bb;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.pilih-pembayaran label:hover {
+    border-color: #315489;
+    background: #f7f0e6;
+}
+
+.pilih-pembayaran input {
+    width: auto;
+    margin: 0;
+}
+
+.ringkasan-pesanan {
+    margin-top: 25px;
+    padding: 18px;
+    background: #f7f0e6;
+    border-radius: 8px;
+    border: 1px solid #d8c5b4;
+}
+
+.ringkasan-pesanan h3 {
+    color: #315489;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.pilihan-motif {
+    margin-bottom: 20px;
+}
+
+.pilihan-motif p {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.motif-list {
+    display: grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+    gap: 8px;
+}
+
+.motif-item {
+    border: 2px solid #d8c5b4;
+    background: white;
+    border-radius: 8px;
+    padding: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.motif-item:hover {
+    border-color: #315489;
     transform: translateY(-2px);
+}
+
+.motif-item.aktif {
+    border-color: #315489;
+    background: #eaf0f8;
+    box-shadow:
+        0 0 0 2px rgba(49, 84, 137, 0.15);
+}
+
+.motif-item img {
+    width: 100%;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.motif-item span {
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: #171717;
+}
+
+.produk-ringkasan {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.produk-ringkasan img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.produk-ringkasan h4 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.produk-ringkasan p {
+    color: #b9533b;
+    font-weight: 600;
+}
+
+.ringkasan-harga {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid #d8c5b4;
+}
+
+.ringkasan-harga p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.ringkasan-harga strong {
+    color: #315489;
+}
+
+#subtotalHarga {
+    font-size: 17px;
 }
 
 .hasil {
@@ -300,7 +517,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0, 0, 0, 0.45);
     justify-content: center;
     align-items: center;
     z-index: 100;
@@ -308,7 +525,7 @@ header {
 
 .popup.aktif {
     display: flex;
-    animation: 
+    animation:
         munculBackground 0.3s ease;
 }
 
@@ -318,16 +535,16 @@ header {
     padding: 30px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 
-        0 10px 30px rgba(0,0,0,0.2);
-    animation: 
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+    animation:
         munculKotak 0.4s ease;
 }
 
 .wajah {
     font-size: 70px;
     margin-bottom: 10px;
-    animation: 
+    animation:
         goyang 2s ease;
 }
 
@@ -362,7 +579,7 @@ header {
 }
 
 .btn-batal:hover {
-    background: #c8c8c8;
+    background: #b8b8b8;
     transform: scale(1.03);
 }
 
@@ -377,50 +594,68 @@ header {
 }
 
 @keyframes munculBackground {
-    from { 
+
+    from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
 @keyframes munculKotak {
+
     from {
-        transform: 
+        transform:
             scale(0.7)
             translateY(30px);
-        
+
         opacity: 0;
     }
+
     to {
-        transform: 
+        transform:
             scale(1)
             translateY(0);
-        
+
         opacity: 1;
     }
 }
 
 @keyframes goyang {
+
     0% {
-        transform: 
+        transform:
             scale(0.5)
             rotate(-10deg);
     }
+
     50% {
-        transform: 
+        transform:
             scale(1.2)
             rotate(-10deg);
     }
+
     100% {
-        transform: 
+        transform:
             scale(1)
             rotate(0deg);
     }
 }
 
 @media (max-width: 768px) {
+
+    .circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .circle img {
+        width: 75%;
+        height: 75%;
+    }
+
     .navbar {
         padding: 0 20px;
     }
@@ -434,8 +669,8 @@ header {
         background: white;
         flex-direction: column;
         gap: 0;
-        box-shadow: 
-            0 3px 8px rgba(0,0,0,0.1);
+        box-shadow:
+            0 3px 8px rgba(0, 0, 0, 0.1);
         z-index: 10;
     }
 
@@ -478,9 +713,9 @@ header {
     }
 
     .produk-container {
-        grid-template-columns: 
+        grid-template-columns:
             repeat(2, 1fr);
-        
+
         gap: 12px;
     }
 
@@ -545,5 +780,461 @@ header {
 
     .wajah {
         font-size: 60px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .form-page {
+        padding: 15px 10px;
+    }
+
+    .form-box {
+        padding: 18px;
+    }
+
+    .form-box h1 {
+        font-size: 22px;
+    }
+
+    .jumlah-row {
+        gap: 8px;
+    }
+
+    .jumlah-control button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .jumlah-control span {
+        width: 35px;
+    }
+
+    .jumlah-row input {
+        width: 70px;
+    }
+
+    .pilih-pembayaran label {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .ringkasan-pesanan {
+        padding: 12px;
+    }
+
+    .motif-list {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+    .motif-item img {
+        height: 80px;
+    }
+
+    .motif-item span {
+        font-size: 12px;
+    }
+
+    .produk-ringkasan img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .produk-ringkasan h4 {
+        font-size: 14px;
+    }
+
+    .btn-pesan-sekarang {
+        font-size: 13px;
+    }
+
+}
+
+.halaman-kontak {
+    min-height: calc(100vh - 64px);
+    background: #f7f0e6;
+    padding: 14px 30px 50px;
+}
+
+.judul-kontak {
+    margin-bottom: 10px;
+}
+
+.judul-kontak h1 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.judul-kontak p {
+    font-size: 14px;
+}
+
+.area-pemesanan {
+    display: grid;
+    grid-template-columns: 290px 302px;
+    gap: 132px;
+    align-items: start;
+}
+
+.form-pemesanan {
+    background: white;
+    width: 290px;
+    padding: 12px 18px;
+    border-radius: 6px;
+}
+
+.form-pemesanan h2 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.field {
+    margin-bottom: 13px;
+}
+
+.field label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #e2e2e2;
+    border-radius: 5px;
+    padding: 7px 10px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+.field input {
+    height: 25px;
+}
+
+.field textarea {
+    height: 54px;
+    resize: none;
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: 1px solid #315489;
+}
+
+.pembayaran-figma {
+    margin-top: 2px;
+}
+
+.pembayaran-figma p {
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.pilihan-pembayaran-figma {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pilihan-pembayaran-figma label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.pilihan-pembayaran-figma input {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    accent-color: #315489;
+}
+
+.ringkasan-figma {
+    width: 302px;
+    background: #d9cfc3;
+    border-radius: 6px;
+    padding: 13px 12px 11px;
+}
+
+.ringkasan-figma h2 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.produk-figma {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    min-height: 90px;
+}
+
+.produk-figma img {
+    width: 82px;
+    height: 89px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+.info-produk-figma {
+    margin-left: 22px;
+    padding-top: 9px;
+}
+
+.info-produk-figma h3 {
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.info-produk-figma p {
+    font-size: 13px;
+    color: #bc5739;
+}
+
+.jumlah-figma {
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.jumlah-figma button {
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.jumlah-figma span {
+    font-size: 12px;
+    min-width: 10px;
+    text-align: center;
+}
+
+.baris-jumlah {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 12px 8px;
+    border-bottom: 1px solid #5f5a55;
+    font-size: 13px;
+}
+
+.baris-jumlah span:last-child {
+    margin-right: 2px;
+}
+
+.baris-subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 12px;
+    font-size: 13px;
+}
+
+.baris-subtotal strong {
+    font-weight: 400;
+}
+
+.ringkasan-figma .btn-pesan-sekarang {
+    display: block;
+    width: 100%;
+    height: 54px;
+    margin-top: 0;
+    border: none;
+    border-radius: 5px;
+    background: #bd5739;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ringkasan-figma .btn-pesan-sekarang:hover {
+    background: #a7472e;
+    transform: none;
+}
+
+@media (max-width: 768px) {
+
+    .halaman-kontak {
+        min-height: calc(100vh - 64px);
+        padding: 7px 10px 20px;
+    }
+
+    .judul-kontak {
+        margin-bottom: 6px;
+    }
+
+    .judul-kontak h1 {
+        font-size: 15px;
+    }
+
+    .judul-kontak p {
+        font-size: 12px;
+    }
+
+    .area-pemesanan {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .ringkasan-figma {
+        order: 1;
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+    }
+
+    .ringkasan-figma h2 {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .produk-figma {
+        min-height: 54px;
+    }
+
+    .produk-figma img {
+        width: 48px;
+        height: 48px;
+        border-radius: 4px;
+    }
+
+    .info-produk-figma {
+        margin-left: 7px;
+        padding-top: 2px;
+    }
+
+    .info-produk-figma h3 {
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+
+    .info-produk-figma p {
+        font-size: 10px;
+    }
+
+    .jumlah-figma {
+        right: 3px;
+        bottom: 4px;
+        gap: 4px;
+    }
+
+    .jumlah-figma button {
+        font-size: 13px;
+    }
+
+    .jumlah-figma span {
+        font-size: 10px;
+    }
+
+    .form-pemesanan {
+        order: 2;
+        width: 100%;
+        padding: 7px 7px 8px;
+        border-radius: 5px;
+    }
+
+    .form-pemesanan h2 {
+        display: none;
+    }
+
+    .field {
+        margin-bottom: 8px;
+    }
+
+    .field label {
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+
+    .field input {
+        height: 27px;
+    }
+
+    .field textarea {
+        height: 54px;
+    }
+
+    .field input,
+    .field textarea {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+
+    .pembayaran-figma p {
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+
+    .pilihan-pembayaran-figma {
+        gap: 10px;
+    }
+
+    .pilihan-pembayaran-figma label {
+        font-size: 9px;
+    }
+
+    .pilihan-pembayaran-figma input {
+        width: 11px;
+        height: 11px;
+    }
+
+    .baris-jumlah {
+        display: none;
+    }
+
+    .baris-subtotal {
+        padding: 5px 4px;
+        font-size: 10px;
+        border-top: 1px solid #5f5a55;
+    }
+
+    .ringkasan-figma .btn-pesan-sekarang {
+        height: 44px;
+        font-size: 10px;
+    }
+
+    .info-produk-figma select {
+        border: none;
+        background: transparent;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        cursor: pointer;
+        outline: none;
+        max-width: 150px;
+    }
+
+    .info-produk-figma select:focus {
+        outline: none;
+    }
+
+    @media (max-width: 768px) {
+
+        .info-produk-figma select {
+            font-size: 10px;
+            max-width: 145px;
+        }
+
     }
 }
